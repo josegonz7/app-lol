@@ -1,61 +1,49 @@
-<main class="home-main">
-    
-    <section class="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h2 class="hero-subtitle">CONVIÉRTETE EN LEYENDA</h2>
-            <h1 class="hero-title">UN CAMPO DE BATALLA REVOLUCIONARIO</h1>
-            <p class="hero-description">Entra en la Grieta del Invocador con más de 140 campeones, jugadas épicas y una comunidad competitiva global.</p>
-            <div class="hero-buttons">
-                <a href="#" class="btn-primary">JUEGA GRATIS</a>
-                <a href="#" class="btn-secondary">VER CAMPEONES</a>
-            </div>
-        </div>
-    </section>
+<!-- home.component.html -->
 
-    <section class="news-section">
-        <div class="section-header">
-            <h2 class="section-title">DESTACADO</h2>
-            <div class="gold-divider"></div>
-        </div>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Conoce todo sobre tu juego favorito</h1>
+    <p>
+      Demuestra tus habilidades
+    </p>
 
-        <div class="news-grid">
-            <article class="news-card">
-                <div class="card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=600&auto=format&fit=crop" alt="Notas del parche">
-                </div>
-                <div class="card-content">
-                    <span class="card-tag">ACTUALIZACIONES</span>
-                    <h3>Notas del parche actual</h3>
-                    <p>Descubre los últimos cambios de balance en los campeones y objetos de la Grieta.</p>
-                    <a href="#" class="card-link">Leer más &rarr;</a>
-                </div>
-            </article>
+    <div class="hero-buttons">
+      <button class="primary-btn">Comenzar</button>
+      <button class="secondary-btn">Ver más</button>
+    </div>
+  </div>
 
-            <article class="news-card">
-                <div class="card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=600&auto=format&fit=crop" alt="Nuevo Campeón">
-                </div>
-                <div class="card-content">
-                    <span class="card-tag">CAMPEONES</span>
-                    <h3>El nuevo amanecer oscuro</h3>
-                    <p>Echa un vistazo en profundidad a las habilidades y trasfondo del nuevo integrante.</p>
-                    <a href="#" class="card-link">Leer más &rarr;</a>
-                </div>
-            </article>
+  <div class="hero-image">
+    <img src="lol.webp" alt="Hero Image" />
+  </div>
+</section>
 
-            <article class="news-card">
-                <div class="card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?q=80&w=600&auto=format&fit=crop" alt="Esports">
-                </div>
-                <div class="card-content">
-                    <span class="card-tag">ESPORTS</span>
-                    <h3>Resultados de la temporada</h3>
-                    <p>Sigue la clasificación y revive los mejores momentos de los torneos regionales.</p>
-                    <a href="#" class="card-link">Leer más &rarr;</a>
-                </div>
-            </article>
-        </div>
-    </section>
+<section class="features">
+  <div class="section-title">
+    <h2>Listado de personajes</h2>
+    <p>Todo lo que necesitas saber sobre los personajes del juego.</p>
+  </div>
 
-</main>
+  <div class="features-grid">
+
+    @for(character of characters; track character.id){
+      <div class="feature-card">
+        <div class="feature-icon"><img src="{{character.thumbnailUrl}}"></div>
+        <h3><a href="character/{{character.id}}">{{character.name}}</a></h3>
+        <p>{{character.title}}</p>
+      </div>
+    }
+
+  </div>
+</section>
+
+<section class="cta">
+  <div class="cta-content">
+    <h2>Empieza hoy mismo</h2>
+    <p>
+      Crea aplicaciones increíbles con una estructura moderna y mantenible.
+    </p>
+
+    <button class="primary-btn">Crear proyecto</button>
+  </div>
+</section>

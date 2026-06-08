@@ -1,0 +1,102 @@
+/* Contenedor principal del apartado */
+.multi-role-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #f0f4f8;
+}
+
+/* Cabecera del filtro */
+.header-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header-section h1 {
+  font-size: 2.3rem;
+  color: #c8aa6e; /* Dorado de la interfaz */
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.header-section p {
+  color: #a0aab5;
+  font-size: 1rem;
+}
+
+/* Grid automático y responsivo */
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+/* Diseño de la tarjeta de campeón */
+.character-card {
+  background: #111823;
+  border: 1px solid #32281f;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.character-card:hover {
+  transform: translateY(-4px);
+  border-color: #c8aa6e;
+  box-shadow: 0 6px 20px rgba(200, 170, 110, 0.15);
+}
+
+/* Cabecera de la tarjeta / Zona de imagen */
+.card-image-placeholder {
+  background: #1e2834;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #32281f;
+}
+
+.avatar-fallback {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #c8aa6e;
+}
+
+/* Bloque de texto e info */
+.card-content {
+  padding: 15px;
+}
+
+.character-name {
+  font-size: 1.2rem;
+  margin: 0 0 4px 0;
+  color: #ffffff;
+}
+
+.character-id {
+  display: block;
+  font-size: 0.8rem;
+  color: #7e8b9b;
+  margin-bottom: 12px;
+}
+
+/* Tags de los roles */
+.roles-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.role-tag {
+  background: rgba(200, 170, 110, 0.08);
+  border: 1px solid #c8aa6e;
+  color: #c8aa6e;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}

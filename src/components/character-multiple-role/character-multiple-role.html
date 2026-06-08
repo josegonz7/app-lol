@@ -1,0 +1,25 @@
+<div class="multi-role-container">
+  <div class="header-section">
+    <h1>Campeones Multirrol</h1>
+    <p>Listado de personajes que dominan varias posiciones en la partida.</p>
+  </div>
+
+  <div class="character-grid">
+    
+    <div class="character-card" *ngFor="let char of characters">
+      <div class="card-image-placeholder">
+        <span class="avatar-fallback">{{ char.name.substring(0, 2).toUpperCase() }}</span>
+      </div>
+      
+      <div class="card-content">
+        <h3 class="character-name">{{ char.name }}</h3>
+        <span class="character-id">ID: {{ char.id }}</span>
+        
+        <div class="roles-tags">
+          <span class="role-tag" *ngFor="let role of char.role">{{ role }}</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
