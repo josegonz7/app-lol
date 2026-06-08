@@ -1,14 +1,13 @@
-/* header.component.css */
-
 .app-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
   height: 70px;
-  background-color: #1e293b;
-  color: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background-color: #010a13; /* Azul oscuro profundo del cliente de LoL */
+  color: #f0e6d2; /* Texto beige claro oficial */
+  border-bottom: 2px solid #785a28; /* Borde dorado hexagonal */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
 .logo-container {
@@ -25,24 +24,37 @@
 
 .brand-name {
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #c8aa6e; /* Dorado brillante */
+  text-shadow: 0 0 10px rgba(200, 170, 110, 0.3);
 }
 
 .nav-menu {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .nav-link {
   text-decoration: none;
-  color: #cbd5e1;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  color: #a09b8c; /* Texto apagado */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.nav-link:hover,
+.nav-link:hover {
+  color: #f0e6d2;
+  text-shadow: 0 0 8px rgba(240, 230, 210, 0.5);
+}
+
 .nav-link.active {
-  color: #ffffff;
+  color: #c8aa6e;
+  border-bottom: 2px solid #c8aa6e;
+  padding-bottom: 4px;
 }
 
 .actions {
@@ -51,22 +63,26 @@
 }
 
 .login-btn {
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 6px;
-  background-color: #3b82f6;
-  color: white;
-  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+  border: 1px solid #c8aa6e;
+  border-radius: 0px; /* Sin bordes redondeados para estética del juego */
+  background: linear-gradient(to bottom, #1e2328, #111318);
+  color: #c8aa6e;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  box-shadow: inset 0 0 5px rgba(200, 170, 110, 0.2);
+  transition: all 0.3s ease;
 }
 
 .login-btn:hover {
-  background-color: #2563eb;
+  background: #c8aa6e;
+  color: #010a13;
+  box-shadow: 0 0 15px rgba(200, 170, 110, 0.4);
 }
 
 /* Responsive */
-
 @media (max-width: 768px) {
   .app-header {
     flex-direction: column;
@@ -78,5 +94,6 @@
   .nav-menu {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 1.2rem;
   }
 }
