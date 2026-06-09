@@ -26,4 +26,9 @@ export class CharacterService {
     //localhost:8080/api/character/filter/multipleroles
     return this._http.get<Character[]>(this._baseUrl + "/characters/filter/multipleroles");
 }
+
+ public getRoles(): Observable<Character[]>{
+    //localhost:8080/api/character/roles
+    return this._http.get<Character[]>(this._baseUrl + "/characters/roles");
+}
 }

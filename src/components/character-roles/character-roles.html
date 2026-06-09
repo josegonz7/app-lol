@@ -1,0 +1,57 @@
+<section class="hero">
+  <div class="hero-content">
+    <h1>Domina cada rol en la grieta</h1>
+    <p>Descubre los personajes que mejor se adaptan a tu estilo de juego</p>
+
+    <div class="hero-buttons">
+      <button class="primary-btn" onclick="document.getElementById('lista-campeones').scrollIntoView({behavior: 'smooth'})">Ver Campeones</button>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <img src="assets/lol.webp" alt="Hero Image" />
+  </div>
+</section>
+
+<section class="features" id="lista-campeones">
+  <div class="section-title">
+    <h2>Campeones de la Grieta</h2>
+    <p>Listado fijo de personajes según el rol seleccionado.</p>
+  </div>
+
+  <div class="features-grid">
+    @for(character of characters; track character.id){
+      <div class="feature-card">
+        <div class="feature-icon">
+          @if (character.thumbnailUrl) {
+            <img src="{{character.thumbnailUrl}}" alt="{{character.name}}">
+          } @else {
+            <span class="avatar-fallback">{{ character.name.substring(0, 2).toUpperCase() }}</span>
+          }
+        </div>
+        <h3><a href="character/{{character.id}}">{{character.name}}</a></h3>
+        <p class="char-title">{{character.title}}</p>
+        
+        <div class="roles-tags">
+          @for (role of character.roles; track role) {
+            <span class="role-tag" [class.tank-special]="role.toLowerCase() === 'tank'">
+              {{ role }}
+            </span>
+          }
+        </div>
+      </div>
+    } @empty {
+      <div class="no-characters">
+        <p>No se encontraron personajes activos cargados en este rol.</p>
+      </div>
+    }
+  </div>
+</section>
+
+<section class="cta">
+  <div class="cta-content">
+    <h2>¿Listo para la batalla?</h2>
+    <p>Elige a tu campeón ideal, domina su posición y conquista la Grieta del Invocador.</p>
+    <button class="primary-btn">Volver al Inicio</button>
+  </div>
+</section>

@@ -1,0 +1,254 @@
+/* character-roles.component.css */
+
+:host {
+  display: block;
+  background-color: #091420; /* Fondo azul oscuro del LoL */
+  color: #f0e6d2; /* Texto beige claro */
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 8%;
+  background: radial-gradient(circle at center, #111c2a 0%, #091420 100%);
+  border-bottom: 1px solid #32281f;
+  gap: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  color: #c8aa6e; /* Dorado oficial */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  color: #a09b8c;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.primary-btn {
+  padding: 0.8rem 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #c8aa6e;
+  background: linear-gradient(to bottom, #1e2328, #111318);
+  color: #c8aa6e;
+}
+
+.primary-btn:hover {
+  background: #c8aa6e;
+  color: #010a13;
+  box-shadow: 0 0 15px rgba(200, 170, 110, 0.4);
+}
+
+.hero-image img {
+  max-width: 450px;
+  height: auto;
+  border: 2px solid #32281f;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* ==========================================================================
+   CUADRÍCULA (FEATURES)
+   ========================================================================== */
+.features {
+  padding: 5rem 8%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  color: #c8aa6e;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5rem;
+}
+
+.section-title p {
+  color: #a09b8c;
+  font-size: 1.1rem;
+}
+
+/* Cuadrícula de Tarjetas */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+/* Tarjeta de Personaje */
+.feature-card {
+  background: #111823;
+  border: 1px solid #32281f;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: #c8aa6e;
+  box-shadow: 0 8px 25px rgba(200, 170, 110, 0.3);
+}
+
+.feature-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1.5rem;
+  border: 2px solid #785a28; /* Marco dorado para el avatar */
+  overflow: hidden;
+  background: #091420;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-fallback {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #c8aa6e;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.feature-card h3 a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.feature-card h3 a:hover {
+  color: #c8aa6e;
+}
+
+.char-title {
+  color: #a09b8c;
+  font-style: italic;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Contenedor y diseño de etiquetas de roles */
+.roles-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.role-tag {
+  background: rgba(0, 90, 130, 0.15);
+  border: 1px solid #005a82;
+  color: #00bfff;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.role-tag.tank-special {
+  background: rgba(212, 114, 56, 0.15);
+  border: 1px solid #d47238;
+  color: #ff8c42;
+}
+
+/* Pantalla vacía */
+.no-characters {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #111823;
+  border: 1px dashed #32281f;
+  color: #a09b8c;
+  font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   CALL TO ACTION (CTA)
+   ========================================================================== */
+.cta {
+  background: linear-gradient(rgba(9, 20, 32, 0.85), rgba(9, 20, 32, 0.85)), 
+              radial-gradient(circle at center, #1e2834 0%, #091420 100%);
+  padding: 5rem 8%;
+  text-align: center;
+  border-top: 1px solid #32281f;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  color: #c8aa6e;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  color: #a09b8c;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 1.5rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+  }
+
+  .features {
+    padding: 3rem 1.5rem;
+  }
+}
